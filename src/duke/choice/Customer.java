@@ -1,8 +1,27 @@
 package duke.choice;
 
 public class Customer {
-    String name;
-    String size;
+    private String name;
+    private String size;
+    private Clothing[] items;
+
+    public void addItems(Clothing[] someItems) {
+        items = someItems;
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
+
+    public double getTotalClothingCost() {
+        double total = 0.0;
+
+        for (Clothing item : items) {
+            total += item.getPrice();
+        }
+
+        return total;
+    }
 
     public String getSize() {
         return size;
