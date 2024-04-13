@@ -1,9 +1,16 @@
 package duke.choice;
 
 public class Customer {
+
     private String name;
     private String size;
     private Clothing[] items;
+    private int measurement;
+
+    public Customer(String name, int measurement) {
+        this.name = name;
+        setSize(measurement);
+    }
 
     public void addItems(Clothing[] someItems) {
         items = someItems;

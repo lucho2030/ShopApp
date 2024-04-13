@@ -1,9 +1,16 @@
 package duke.choice;
 
 public class Clothing {
+
     private String description;
     private double price;
-    String size;
+    private String size;
+
+    public Clothing(String description, double price, String aSize) {
+        this.description = description;
+        this.price = price;
+        size = aSize;
+    }
 
     public void setDescription(String description) {
         this.description = description;
