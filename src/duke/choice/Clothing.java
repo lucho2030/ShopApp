@@ -6,6 +6,9 @@ public class Clothing {
     private double price;
     private String size;
 
+    public final static double MIN_PRICE = 10.0;
+    public final static double TAX_RATE = 0.2;
+
     public Clothing(String description, double price, String aSize) {
         this.description = description;
         this.price = price;
@@ -17,7 +20,6 @@ public class Clothing {
     }
 
     public void setPrice(double price) {
-        double MIN_PRICE = 10.0;
         this.price = Math.min(price, MIN_PRICE);
     }
 
@@ -30,12 +32,16 @@ public class Clothing {
     }
 
     public double getPrice() {
-        double TAX_RATE = 0.2;
         this.price = (price * TAX_RATE) + price;
         return price;
     }
 
     public String getSize() {
         return size;
+    }
+
+    @Override
+    public String toString() {
+        return getDescription() + "," + getPrice() + "," + getSize();
     }
 }

@@ -11,6 +11,8 @@ public class ShopApp {
         //c1.setName("Pinky");
         //c1.setSize("S");
 
+        System.out.println("Minimun price: " + Clothing.MIN_PRICE);
+
         //Clothing item1 = new Clothing();
         //Clothing item2 = new Clothing();
         //Clothing item3 = new Clothing();
@@ -46,7 +48,8 @@ public class ShopApp {
         System.out.println("Customer is " + c1.getName() + ". Size: " + c1.getSize() + ".");
 
         for (Clothing item : c1.getItems()) {
-            System.out.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
+            //System.out.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
+            System.out.println("Item: " + item);
             total = c1.getTotalClothingCost();
         }
 
