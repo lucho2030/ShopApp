@@ -1,5 +1,7 @@
 package duke.choice;
 
+import java.util.Arrays;
+
 public class ShopApp {
     public static void main(String[] args) {
         //double tax = 0.2;
@@ -47,6 +49,8 @@ public class ShopApp {
 
         System.out.println("Customer is " + c1.getName() + ". Size: " + c1.getSize() + ".");
 
+        Arrays.sort(c1.getItems());
+
         for (Clothing item : c1.getItems()) {
             //System.out.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
             System.out.println("Item: " + item);
@@ -54,5 +58,6 @@ public class ShopApp {
         }
 
         System.out.printf("Total: %.2f %n", total);
+
     }
 }
